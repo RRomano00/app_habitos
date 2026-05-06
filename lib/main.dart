@@ -1,3 +1,5 @@
+import 'package:app_habitos/views/login_view.dart';
+import 'package:app_habitos/views/welcome_view.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -10,6 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => WelcomeView(),
+        '/login': (context) => LoginView(),
+      },
+    );    
   }
 }
